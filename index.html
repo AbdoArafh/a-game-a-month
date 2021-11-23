@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>A Game A Month</title>
+      <link rel="stylesheet" href="windi.css">
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="bg-gray-100 m-0 bg-gradient-15 min-h-[100vh] h-[100vh] overflow-x-hidden" style="font-family: Arial, Helvetica, sans-serif;">
+      <div class="wrapper">
+        <nav class="navbar p-2 text-white fixed top-0 w-[98vw] flex flex-row items-center">
+            <div class="logo font-extrabold text-2xl select-none">AGAM</div>
+            <ul class="nav-items list-none p-1 m-0 grid grid-cols-5 gap-2 absolute right-4 text-lg font-bold">
+                <a class="underline-transparent text-white hover:underline-white" href="#"><li>Home</li></a>
+                <a class="underline-transparent text-white hover:underline-white" href="#"><li>About</li></a>
+                <a class="underline-transparent text-white hover:underline-white" href="#"><li>Contact</li></a>
+                <a class="underline-transparent text-white hover:bg-white hover:text-purple-500 p-1 rounded-xl border-white border-solid text-center" href="#"><li>Login</li></a>
+                <a class="underline-transparent text-white hover:bg-white hover:text-purple-500 p-1 rounded-xl border-white border-solid text-center" href="#"><li>Sign up</li></a>
+            </ul>
+        </nav>
+      </div>
+      <form action="#" class="text-white m-0 mt-10 w-[100%] flex flex-col items-center justify-center text-center">
+          <h1>
+                One <strong id="typed"></strong>
+                <br>
+                Every Month.    
+          </h1>
+          <input type="text" name="name" id="name" class="border-white outline-none bg-transparent border-solid rounded-xl border-4 h-10 w-[50%] placeholder-light-200 text-xl p-3 my-2" placeholder="User Name">
+          <input type="password" name="password" id="password" class="border-white outline-none bg-transparent border-solid rounded-xl border-4 h-10 w-[50%] placeholder-light-200 text-xl p-3 my-1" placeholder="Password">
+          <input type="submit" value="Login" class="w-[calc(50%+1.5rem)] h-16 rounded-xl border-white bg-transparent border-solid text-white text-xl font-bold hover:bg-white hover:text-purple-500 my-2 border-4 cursor-pointer">
+      </form>
+      <div class="cutout"></div>
+      <div class="blank"></div>
+      <script src="typed.js"></script>
+      <script>
+          let options = {
+              strings: ["Game", "Opportunity", "Enteraining Chance"],
+              typeSpeed: 100,
+              backSpeed: 50,
+              loop: true,
+          };
+          const typed = new Typed("#typed", options);
+      </script>
+  </body>
+  </html>
