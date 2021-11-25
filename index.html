@@ -1,48 +1,80 @@
 <!DOCTYPE html>
-  <html lang="en">
 
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>A Game A Month</title>
-      <link rel="stylesheet" href="windi.css">
-      <link rel="stylesheet" href="style.css">
-  </head>
+<html lang="en" class="overflow-hidden">
 
-  <body class="bg-gray-100 m-0 bg-gradient-15 min-h-[100vh] h-[100vh] overflow-x-hidden" style="font-family: Arial, Helvetica, sans-serif;">
-      <div class="wrapper">
-        <nav class="navbar p-2 text-white fixed top-0 w-[98vw] flex flex-row items-center">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>A Game A Month</title>
+        <link rel="stylesheet" href="windi.css">
+        <style>
+            .hide {
+                left: -110vw;
+            }
+            img {
+                position: relative;
+            }
+        </style>
+    </head>
+
+    <body class="m-0 bg-gradient-15 min-h-[100vh] h-[100vh] overflow-x-hidden" style="font-family: Arial, Helvetica, sans-serif;">
+        <div class="wrapper">
+        <nav class="navbar bg-light-700 bg-opacity-25 p-2 text-white fixed top-0 w-[98vw] flex flex-row items-center h-10">
             <div class="logo font-extrabold text-2xl select-none">AGAM</div>
-            <ul class="nav-items list-none p-1 m-0 grid grid-cols-5 gap-2 absolute right-4 text-lg font-bold">
-                <a class="underline-transparent text-white hover:underline-white" href="#"><li>Home</li></a>
-                <a class="underline-transparent text-white hover:underline-white" href="#"><li>About</li></a>
-                <a class="underline-transparent text-white hover:underline-white" href="#"><li>Contact</li></a>
-                <a class="underline-transparent text-white hover:bg-white hover:text-purple-500 p-1 rounded-xl border-white border-solid text-center" href="#"><li>Login</li></a>
-                <a class="underline-transparent text-white hover:bg-white hover:text-purple-500 p-1 rounded-xl border-white border-solid text-center" href="#"><li>Sign up</li></a>
+            <ul class="hide nav-items list-none p-1 m-0 flex flex-row absolute right-4 text-lg font-bold transition-left ease-out duration-500 <sm:(w-[100vw] h-[100vh] fixed top-0 left-0 bg-orange-400 flex-col z-20 mt-14)">
+                <a class="m-1 no-underline text-white hover:(bg-light-500 bg-opacity-20) p-2 rounded-xl text-center" href="#"><li>Home</li></a>
+                <a class="m-1 no-underline text-white hover:(bg-light-500 bg-opacity-20) p-2 rounded-xl text-center" href="#"><li>About</li></a>
+                <a class="m-1 no-underline text-white hover:(bg-light-500 bg-opacity-20) p-2 rounded-xl text-center" href="#"><li>Contact</li></a>
+                <a class="m-1 no-underline text-white hover:bg-white hover:text-blue-400 p-1 rounded-xl border-white border-solid text-center" href="#"><li>Join Now</li></a>
+                <a class="m-1 no-underline text-white hover:bg-white hover:text-blue-400 p-1 rounded-xl border-white border-solid text-center" href="#"><li>Login</li></a>
             </ul>
+            <div class="cursor-pointer right-5 absolute w-5 h-5 sm:hidden" id="toggler">
+                <div class="rounded-xl h-1 mb-1 bg-white"></div>
+                <div class="rounded-xl h-1 mb-1 bg-white"></div>
+                <div class="rounded-xl h-1 bg-white"></div>
+            </div>
         </nav>
-      </div>
-      <form action="#" class="text-white m-0 mt-10 w-[100%] flex flex-col items-center justify-center text-center">
-          <h1>
+        </div>
+        <form action="#" class="text-white m-0 mt-20 w-[100%] flex flex-col items-center justify-center text-center">
+            <h1 class="m-0">
                 One <strong id="typed"></strong>
                 <br>
                 Every Month.    
-          </h1>
-          <input type="text" name="name" id="name" class="border-white outline-none bg-transparent border-solid rounded-xl border-4 h-10 w-[50%] placeholder-light-200 text-xl p-3 my-2" placeholder="User Name">
-          <input type="password" name="password" id="password" class="border-white outline-none bg-transparent border-solid rounded-xl border-4 h-10 w-[50%] placeholder-light-200 text-xl p-3 my-1" placeholder="Password">
-          <input type="submit" value="Login" class="w-[calc(50%+1.5rem)] h-16 rounded-xl border-white bg-transparent border-solid text-white text-xl font-bold hover:bg-white hover:text-purple-500 my-2 border-4 cursor-pointer">
-      </form>
-      <div class="cutout"></div>
-      <div class="blank"></div>
-      <script src="typed.js"></script>
-      <script>
-          let options = {
-              strings: ["Game", "Opportunity", "Enteraining Chance"],
-              typeSpeed: 100,
-              backSpeed: 50,
-              loop: true,
-          };
-          const typed = new Typed("#typed", options);
-      </script>
-  </body>
-  </html>
+            </h1>
+            <input type="text" name="name" id="name" class="border-white outline-none bg-transparent border-solid rounded-xl border-4 h-10 w-[50%] placeholder-light-200 text-xl p-3 my-2" placeholder="User Name">
+            <input type="password" name="password" id="password" class="border-white outline-none bg-transparent border-solid rounded-xl border-4 h-10 w-[50%] placeholder-light-200 text-xl p-3 my-1" placeholder="Password">
+            <input type="submit" value="Join Now" class="w-[calc(50%+1.5rem)] h-16 rounded-xl border-white bg-transparent border-solid text-white text-xl font-bold hover:bg-white hover:text-blue-400 my-2 border-4 cursor-pointer">
+        </form>
+        <img class="sm:cutout static w-[100%] z-[-1] my-10" src="games.jpeg" alt="games">
+        <div class="bg-transparent text-white flex flex-col justify-center items-center text-center py-20 px-auto">
+            <h1>Don't Miss on this Opportunity</h1>
+            <button class="w-[calc(50%+1.5rem)] h-16 rounded-xl border-white bg-transparent border-solid text-white text-xl font-bold hover:bg-white hover:text-blue-400 my-2 border-4 cursor-pointer">Join Now</button>
+        </div>
+        <footer class="bg-dark-200 opacity-70 text-white font-semibold text-xl py-10 pl-3">
+            &copy; All copyrights rights reserved to me 2021
+            <a class="text-white underline-transparent italic font-bold hover:(underline-white not-italic)" href="https://github.com/AbdoArafh"> Github </a>
+        </footer>
+        <script src="typed.js"></script>
+        <script>
+            let options = {
+                strings: ["Game", "Opportunity", "Enteraining Chance"],
+                typeSpeed: 100,
+                backSpeed: 50,
+                loop: true,
+            };
+            const typed = new Typed("#typed", options);
+
+            const nav = document.querySelector("nav ul");
+            const toggler = document.querySelector("#toggler");
+
+            toggler.onclick = function (event) {
+                nav.classList.toggle("hide");
+            };
+
+            window.addEventListener( "resize", function () {
+                if (document.body.clientWidth >= 640)
+                    nav.classList.remove("hide");
+            });
+        </script>
+    </body>
+</html>
